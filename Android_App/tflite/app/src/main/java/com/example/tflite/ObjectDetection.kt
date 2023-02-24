@@ -132,13 +132,25 @@ class ObjectDetection : AppCompatActivity(), ImageAnalysis.Analyzer {
                 // Unbind use cases before rebinding
                 cameraProvider.unbindAll()
 
+                val camKind = intent.getIntExtra("value", 0)
                 // Bind use cases to camera
-                cameraProvider.bindToLifecycle(
-                    this,
-                    CameraSelector.DEFAULT_FRONT_CAMERA,
-                    preview,
-                    imageAnalyzer
-                )
+                if(camKind==0) {
+                    cameraProvider.bindToLifecycle(
+                        this,
+                        CameraSelector.DEFAULT_FRONT_CAMERA,
+                        preview,
+                        imageAnalyzer
+                    )
+                }
+                else {
+                    cameraProvider.bindToLifecycle(
+                        this,
+                        CameraSelector.DEFAULT_BACK_CAMERA,
+                        preview,
+                        imageAnalyzer
+                    )
+                }
+
             } catch (exc: Exception) {
                 Log.e(TAG, "Use case binding failed", exc)
             }

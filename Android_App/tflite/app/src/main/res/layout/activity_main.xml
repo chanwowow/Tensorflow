@@ -9,14 +9,32 @@
     <Button
         android:id="@+id/btnObjectDetection"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:background="#F6F6F6"
         android:onClick="btnObjectDetection_click"
-        android:text="Object Detection"
+        android:text="Front CAM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnObjectDetection2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:background="#F6F6F6"
+        android:onClick="btnObjectDetection_click"
+        android:text="Rear CAM"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567"
         tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
