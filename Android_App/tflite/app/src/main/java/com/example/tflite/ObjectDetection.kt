@@ -52,6 +52,7 @@ class ObjectDetection : AppCompatActivity(), ImageAnalysis.Analyzer {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_object_detection)
 
+        supportActionBar?.hide()
 
         surfaceView=findViewById<SurfaceView>(R.id.surfaceView)
         viewFinder=findViewById<PreviewView>(R.id.viewFinder)
@@ -65,7 +66,7 @@ class ObjectDetection : AppCompatActivity(), ImageAnalysis.Analyzer {
         cameraExecutor = Executors.newSingleThreadExecutor()
 
         // init the paint for drawing the detections
-        _paint.color = Color.RED
+        _paint.color = Color.GREEN
         _paint.style = Paint.Style.STROKE
         _paint.strokeWidth = 3f
         _paint.textSize = 50f
